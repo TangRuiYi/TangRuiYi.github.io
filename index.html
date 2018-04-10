@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul {
+            margin-left: 50px;
+        }
+
+        li {
+            width: 200px;
+            height: 30px;
+            margin: 10px;
+            background: #ccc;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-size: 24px;
+
+        }
+
+        .wrapper {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li draggable="true">1</li>
+        <li draggable="true">2</li>
+        <li draggable="true">3</li>
+        <li draggable="true">4</li>
+        <li draggable="true">5</li>
+    </ul>
+    <div class="wrapper"></div>
+    <script>    
+        var oLi = document.getElementsByTagName('li')
+        len = oLi.length,
+            oUl = document.getElementsByTagName('ul')[0];
+        function bindEvent() {
+
+
+
+            for (var j = 0; j < oLi.length; j++) {
+                (function (i) {
+                    oLi[i].addEventListener('dragstart', function (e) {
+                        e.dataTransfer.setData('data', i);
+                    });
+                    oLi[i].addEventListener('dragover', function (e) {
+                        e.preventDefault();
+                    });
+                    oLi[i].addEventListener('drop', function (e) {
+                        var i = e.dataTransfer.getData('data');
+                        console.log(i);
+                        oUl.insertBefore(oLi[i], this);
+                    });
+                })(j)
+            }
+
+        }
+
+        bindEvent();
+    </script>
+</body>
+
+</html>
