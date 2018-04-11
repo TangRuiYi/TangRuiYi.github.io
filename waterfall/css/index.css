@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.wrapper{
+    width:80%;
+    min-width:950px;
+    border:1px solid black;
+    margin:0 auto;
+    text-align: center;
+}
+.wrapper .box{
+    display: inline-block;
+}
+.wrapper .box li{
+    float: left;
+}
+.wrapper .box li .item{
+    width:200px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    margin:0 5px 10px;
+}
+.wrapper .box li .item .box{
+    width:100%;
+}
+.wrapper .box li .item img{
+    width:100%;
+}
+.wrapper .box li .item p{
+    font-size: 16px;
+}
+
