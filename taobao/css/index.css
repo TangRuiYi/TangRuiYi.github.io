@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.wrapper{
+    position: relative;
+}
+
+.wrapper .img{
+
+    height:280px;
+    width:520px;
+    margin:200px auto;
+    /* border:1px solid black; */
+    overflow: hidden;
+}
+.wrapper .img .slider-page{
+    position: relative;
+    left:0px;
+    top:0px;
+
+    height:100%;
+    width:3120px;
+}
+.wrapper .img ul li{
+    position: relative;
+    float: left;
+}
+.wrapper .img ul li div{
+    position: absolute;
+    left:0px;
+    bottom:0px;
+
+}
+.wrapper .bottom-img{
+    position: absolute;
+    left:46%;
+    top:91%;
+    width:70px;
+    height: 13px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0;
+    background-color: rgba(255,255,255,.3);
+}
+.wrapper .bottom-img li{
+    display: inline-block;
+    margin: 3px;
+}
+.wrapper .bottom-img li a{
+    display: block;
+    padding-top: 8px;
+    width: 8px;
+    height: 0;
+    border-radius: 50%;
+    background: #fff;
+}
+.wrapper .dir{
+    height:30px;
+    width:520px;
+    margin-left:-260px;
+    margin-top:-15px;
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+.wrapper .dir .dir-left,.dir-right{
+    height: 30px;
+    width: 20px;
+    line-height: 30px;
+    font-size:25px;
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    font-family: iconfont!important;
+    font-style: normal;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    /* margin-left: 6px; */
+    /* top:50%; */
+    background-color: rgba(0,0,0,.3);
+}
+
+.wrapper:hover .dir .dir-left{
+    opacity: 0.5;
+}
+.wrapper .dir .dir-left:hover{
+    opacity: 1;
+}
+
+.wrapper:hover .dir .dir-right{
+    opacity: 0.5;
+}
+.wrapper .dir .dir-right:hover{
+    opacity: 1;
+}
+.wrapper .dir .dir-left{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-clip: padding-box;
+    left:0%;
+    top:0%;
+}
+.wrapper .dir .dir-right{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-clip: padding-box;
+    right:0%;
+    top:0%;
+}
+/* .wrapper .dot .bottom-img{
+    border-radius: 10px;
+    position: absolute;
+    bottom: 15px;
+    height: 13px;
+    text-align: center;
+    font-size: 0;
+    left: 50%;
+    margin-left: -39px;
+    background-color: rgba(255,255,255,.3);
+} */
+.wrapper .bottom-img li .active{
+    background:#f40;
+}
+
+
+
+
+
