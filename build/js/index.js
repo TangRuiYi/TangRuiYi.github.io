@@ -1,0 +1,1 @@
+var songList,$=window.Zepto,$scope=$(document.body),root=window.player;function getData(o){$.ajax({type:"GET",url:o,success:function(o){songList=o,root.render(songList[0])},error:function(){console.log("error")}})}console.log("hello"),getData("../../json/data.json");
